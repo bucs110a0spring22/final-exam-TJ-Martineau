@@ -13,15 +13,22 @@ Please make sure you have completed the soot survey at:
 
 Please list the urls for the APIs you used:
 
+https://animechan.vercel.app/api/random
+https://anime-facts-rest-api.herokuapp.com/api/v1/
+
 Summary of Program:
 
-Most Challenging topic in the course:
+This program when given any input from the user other than quit gets a random anime, a random quote from the anime, and attempts to get a random fact with it. If the random fact fetching fails, a fact about Full Metal Alchemist is displayed instead.
+
+Most Challenging topic in the course: 
+
+API's
 
 ## KNOWN BUGS AND INCOMPLETE PARTS:
- < What parts of the project you were not able to complete >
+N/A
 
 ## REFERENCES:
- < List any outside resources used >
+N/A
 
 ## MISCELLANEOUS COMMENTS:
- < Anything you would like the grader to know >
+Hi!!!!!!

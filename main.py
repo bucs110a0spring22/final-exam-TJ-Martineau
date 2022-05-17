@@ -2,6 +2,6 @@ import Controller
 
 def main():
   Session = Controller.Controller()
-  Session.ProgramLoop()
+  Session.programLoop()
   
 main()

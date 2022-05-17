@@ -7,9 +7,8 @@ class Controller:
     Creates a session of the program
     """
     self.state = "RUNNING"
-    self.stories = ""
 
-  def GenerateText(self):
+  def generateText(self):
     """
     Generates text to be displayed on screen
     """
@@ -17,15 +16,16 @@ class Controller:
 
     anime_quote = AnimeQuote.AnimeQuote()
     anime_fact = AnimeFact.AnimeFact()
-
-    fact = anime_fact.get(anime_quote.get('anime'))
+    anime_title = anime_quote.get('anime')
+    
+    fact = anime_fact.get(anime_title)
     quote = anime_quote.get('quote')
 
-    text = quote + '\n' + fact
+    text = '\n' + anime_title + '\n' + quote + '\n' + '\n' + fact 
 
     self.text = self.text + text
   
-  def ProgramLoop(self):
+  def programLoop(self):
     """
     The program loop that goes on until the user enters quit
     """
@@ -34,7 +34,7 @@ class Controller:
       if self.input == "quit":
         self.state = "DONE"
       else:
-        self.GenerateText()
+        self.generateText()
         print(self.text)
 
     if self.state == "DONE":

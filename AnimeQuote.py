@@ -14,12 +14,16 @@ class AnimeQuote:
 
     arg: specifies the information needed from the quote data (string)
 
-    Returns the specified content from the api
+    Returns the specified content from the api (string), or 'no response' (string)
     """
-    response = requests.get(self.api_url)
-    data = response.text
-    content = json.loads(data)
-    return content[arg]
+
+    if requests.get(self.api_url):
+      response = requests.get(self.api_url)
+      data = response.text
+      content = json.loads(data)
+      return content[arg]
+    else:
+      return "no response"
 
   def __str__(self):
     return "AnimeQuote"

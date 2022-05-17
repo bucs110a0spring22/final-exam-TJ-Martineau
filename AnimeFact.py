@@ -10,13 +10,13 @@ class AnimeFact:
     self.api_url = "https://anime-facts-rest-api.herokuapp.com/api/v1/"
     self.response = ""
 
-  def FixTitle(self, anime):
+  def fixTitle(self, anime):
     """
     Takes in a title and changes it so that it can be added to a url
 
     Arguments: anime (string) is the original title
 
-    Returns the fixed title
+    Returns the fixed title (string)
     """
     anime_temp = ""
     for letter in anime:
@@ -37,7 +37,7 @@ class AnimeFact:
 
     Returns either a fact about the given anime or a fact about Full Metal Alchemist
     """
-    title = self.FixTitle(anime)
+    title = self.fixTitle(anime)
     
     if requests.get(self.api_url + title):
       response = requests.get(self.api_url + title)
