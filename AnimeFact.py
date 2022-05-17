@@ -58,4 +58,7 @@ class AnimeFact:
     return fact
 
   def __str__(self):
+    """
+    Returns class as string 'AnimeFact' (string)
+    """
     return "AnimeFact"

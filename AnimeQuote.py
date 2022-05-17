@@ -26,6 +26,9 @@ class AnimeQuote:
       return "no response"
 
   def __str__(self):
+    """
+    Returns class as string 'AnimeQuote' (string)
+    """
     return "AnimeQuote"
 
 
